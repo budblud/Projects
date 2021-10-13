@@ -129,6 +129,9 @@ while check_winner():
     _ = player1_choise()
     choise = (_, _st)
     free_cells(choise)
+    if list_of_values == []:
+        print('Nobody wins!')
+        break
 
     if check_winner():
         _2 = player2_choise()
