@@ -1,4 +1,4 @@
-list_of_values = [0, 1, 2, 3, 4, 5, 6, 7, 8]
+'''list_of_values = [0, 1, 2, 3, 4, 5, 6, 7, 8]
 board = ['0', '1', '2', '3', '4', '5', '6', '7', '8']
 def board_displaying(board):
     print("       |       |        ")
@@ -138,6 +138,12 @@ while check_winner():
         choise2 = (_2, _nd)
         free_cells(choise2)
     else:
-        break
+        break'''
+
+def func():
+    for i in range(100,49,5):
+        print(i)
+
+func()
 
 

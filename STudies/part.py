@@ -20,6 +20,17 @@ class Stores:
                 f"The quantity of items,{len(self.items)}, do not correspond to the quantity of prices,{len(self.prices)}."
             )
 
-store = Stores(name= 'My Wonderful Store', items= ["Chair", "Table", "Socks", "Bottle"], prices= [1, 15.99, 21.76, 3, 1.3])
+
+
+store = Stores(name= 'My Wonderful Store', items= ["Chair", "Table", "Socks", "Bottle"], prices= [15.99, 21.76, 3, 1.3])
 
 print(store.all_prices_for_each_item())
+
+'''class Hide(Stores):
+
+    def __init__(self,polyhide):
+        Stores.__init__(self, name, items, price) #how inheritance works
+        self.polyhide = polyhide
+
+hide = Hide(polyhide = 'str')
+print(hide.polyhide)'''
