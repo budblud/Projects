@@ -1,0 +1,4 @@
+2021-12-17 18:23:00,280 ERROR :: error from callback <bound method Binance.onClose of <__main__.Binance object at 0x10443e350>>: Binance.onClose() takes 3 positional arguments but 4 were given
+2021-12-17 18:23:03,563 INFO :: The connection is opened successfully!
+2021-12-17 18:23:03,870 ERROR :: error from callback <bound method Binance.onMessage of <__main__.Binance object at 0x104902350>>: 'k'
+2021-12-18 00:01:24,213 ERROR :: error from callback <bound method Binance.onClose of <__main__.Binance object at 0x104902350>>: Binance.onClose() takes 3 positional arguments but 4 were given

@@ -10,6 +10,14 @@ import websocket
 
 
 logger = logging.getLogger()
+logger.setLevel(logging.INFO)
+format = logging.Formatter("%(asctime)s %(levelname)s :: %(message)s")
+
+file_handler = logging.FileHandler("logs.log")
+file_handler.setFormatter(format)
+file_handler.setLevel(logging.INFO)
+
+logger.addHandler(file_handler)
 
 class StatusCodeIsWrong(ValueError):
     pass
@@ -39,6 +47,7 @@ class BinanceSamples():
 
         if method.upper() == 'GET':
             response = requests.get(self.base_url + endpoint, params, headers=self.headers)
+            print(response.status_code, response.json())
         elif method.upper() == 'POST':
             response = requests.post(self.base_url + endpoint, params, headers=self.headers)
         elif method.upper() == 'DELETE':
@@ -178,3 +187,6 @@ class BinanceSamples():
 
     def on_message(self,msg):
         print(msg)
+
+binance = BinanceSamples(True)
+binance.endpoint_request(method= "GET",endpoint="/api/v3/exchangeInfo")
